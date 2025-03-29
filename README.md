@@ -32,6 +32,22 @@ AXI4-Lite is commonly used in:
 - **Low-Speed Communication Interfaces** – Used for peripherals that do not require high-speed data throughput.
 - **Memory-Mapped IO** – Frequently used for accessing memory-mapped devices in SoCs.
 
+
+## Run Command
+
+To compile, simulate, and view waveforms, execute the following commands:
+
+### 1. Compile the Design and Testbench
+```sh
+iverilog -o out.vvp -I src src/top.v tb/tb.v
+
+```sh
+vvp out.vvp
+
+```sh
+gtkwave axi_lite.vcd
+
+
 ## References
 
 - [AMBA AXI and ACE Protocol Specification](https://www.realdigital.org/doc/a9fee931f7a172423e1ba73f66ca4081)
